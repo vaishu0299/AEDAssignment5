@@ -5,6 +5,7 @@
 package Business.Employee;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -27,5 +28,16 @@ public class EmployeeDirectory {
         employee.setName(name);
         employeeList.add(employee);
         return employee;
+    }
+    
+    public void deleteEmployee(String name){
+        Iterator<Employee> itr = employeeList.iterator();
+        while (itr.hasNext()) {
+          Employee ek = itr.next();
+          if (ek.getName().equals(name)) {
+            itr.remove();
+          }
+        }
+
     }
 }

@@ -5,10 +5,39 @@
  */
 package Business.Customer;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author harold
  */
 public class CustomerDirectory {
+    
+    ArrayList<Customer> cd;
+    
+    public CustomerDirectory(){
+        cd = new ArrayList<Customer>();
+    }
+    
+    public void addCustomer(Customer c){
+        cd.add(c);
+    }
+    
+    public void deleteCustomer(Customer c){
+        cd.remove(c);
+    }
+    
+    public ArrayList<Customer> returnCustomerDetails(){
+        return cd;
+    }
+    
+    public Customer getCustomer(String name){
+        for(Customer customer: cd){
+            if(customer.getName().equalsIgnoreCase(name)){
+                return customer;
+            }
+        }
+        return null;
+    }
     
 }

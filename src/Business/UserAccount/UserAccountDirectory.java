@@ -7,6 +7,7 @@ package Business.UserAccount;
 import Business.Employee.Employee;
 import Business.Role.Role;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -48,5 +49,23 @@ public class UserAccountDirectory {
                 return false;
         }
         return true;
+    }
+    
+    public UserAccount getUserAccount(String username){
+        for (UserAccount ua : userAccountList){
+            if (ua.getUsername().equals(username))
+                return ua;
+        }
+        return null;
+    }
+    
+    public void deleteUserAccount(UserAccount inputUserAcc){
+        Iterator<UserAccount> itr = userAccountList.iterator();
+        while (itr.hasNext()) {
+            UserAccount ua = itr.next();
+            if (ua.getUsername().equals(inputUserAcc.getUsername())) {
+                itr.remove();
+            }
+        }
     }
 }

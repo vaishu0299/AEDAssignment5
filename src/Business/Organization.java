@@ -47,7 +47,7 @@ public abstract class Organization {
         ++counter;
     }
     public Organization(){
-        
+       
     }
     public abstract ArrayList<Role> getSupportedRole();
     

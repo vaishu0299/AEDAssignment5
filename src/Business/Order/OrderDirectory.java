@@ -1,0 +1,58 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+//package Business.Order;
+
+/**
+ *
+ * @author vaishnavisai
+ */
+//public class OrderDirectory {
+    ////
+//}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Business.Order;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author ravi
+ */
+public class OrderDirectory {
+    private ArrayList<Order> orderDirectory;
+    
+    public OrderDirectory() {
+        orderDirectory = new ArrayList();
+    }
+
+    public ArrayList<Order> getOrderDirectory() {
+        return orderDirectory;
+    }
+
+    public void setOrderDirectory(ArrayList<Order> orderDirectory) {
+        this.orderDirectory = orderDirectory;
+    }
+    
+    public Order newOrder(){
+        Order order = new Order();
+        orderDirectory.add(order);
+        return order;
+    }
+    
+    public Order getOrderId(int orderId){
+        for(Order order: orderDirectory){
+            if(order.getOrderId()== (orderId)){
+                return order;
+            }
+        }
+        return null;
+    }
+    
+}
+
