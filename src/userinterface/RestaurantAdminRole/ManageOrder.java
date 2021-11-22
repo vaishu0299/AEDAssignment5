@@ -20,7 +20,7 @@ import userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
 
 /**
  *
- * @author Vaishnavisai
+ * @author Nithin Bharadwaj
  */
 public class ManageOrder extends javax.swing.JPanel {
 
@@ -87,6 +87,8 @@ public class ManageOrder extends javax.swing.JPanel {
         btnAssignDeliveryAgent = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         btnRefreshOrders = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

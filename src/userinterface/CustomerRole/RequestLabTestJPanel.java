@@ -31,7 +31,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         
         this.userAccount = account;
-       
+        valueLabel.setText(account.getUsername());
     }
 
     /**
@@ -50,6 +50,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         valueLabel = new javax.swing.JLabel();
         enterpriseLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         requestTestJButton.setText("Request Test");

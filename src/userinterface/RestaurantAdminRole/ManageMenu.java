@@ -18,7 +18,7 @@ import userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
 
 /**
  *
- * @author Vaishnavisai
+ * @author Nithin Bharadwaj
  */
 public class ManageMenu extends javax.swing.JPanel {
 
@@ -57,6 +57,8 @@ public class ManageMenu extends javax.swing.JPanel {
         btnView = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnUpdateMenu = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
